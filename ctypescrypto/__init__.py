@@ -16,6 +16,6 @@ def config(filename=None):
 
 __all__ = ['config']
 
-libcrypto = CDLL(find_library("libcrypto"))
+libcrypto = CDLL(find_library("crypto"))
 libcrypto.OPENSSL_config.argtypes = (c_char_p, )
 libcrypto.OPENSSL_add_all_algorithms_conf()
